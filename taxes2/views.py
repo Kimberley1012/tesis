@@ -6,16 +6,16 @@ from .models import Constants
 
 class Introduction(Page):
     """Description of the game: How to play and returns expected"""
-    pass
-
+    def is_displayed(self):
+        return self.round_number == 1
 
 class Contribute(Page):
     """Player: Choose how much to contribute"""
 
     form_model = models.Player
-    form_fields = ['contribution']
+    form_fields = ['ideclarado']
 
-    timeout_submission = {'contribution': c(Constants.endowment / 2)}
+    timeout_submission = {'ideclarado': c(Constants.endowment / 2)}
 
 
 class ResultsWaitPage(WaitPage):
@@ -30,7 +30,7 @@ class Results(Page):
 
     def vars_for_template(self):
         return {
-            'total_earnings': self.group.total_contribution * Constants.multiplier,
+            'total_earnings': self.group.total_ideclarado * Constants.multiplier,
         }
 
 
@@ -40,3 +40,5 @@ page_sequence = [
     ResultsWaitPage,
     Results
 ]
+
+

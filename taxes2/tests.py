@@ -16,17 +16,17 @@ class PlayerBot(Bot):
 
         if case == 'basic':
             if self.player.id_in_group == 1:
-                for invalid_contribution in [-1, 101]:
+                for invalid_ideclarado in [-1, 101]:
                     yield SubmissionMustFail(views.Contribute, {
-                        'contribution': invalid_contribution})
+                        'ideclarado': invalid_ideclarado})
 
-        contribution = {
+        ideclarado = {
             'min': 0,
             'max': 100,
             'basic': 50,
         }[case]
 
-        yield (views.Contribute, {"contribution": contribution})
+        yield (views.Contribute, {"ideclarado": ideclarado})
 
         yield (views.Results)
 

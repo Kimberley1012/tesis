@@ -8,22 +8,37 @@
 
     <p>
     <b>
-        Este juego solo se diferencia del anterior en que no conoces cuán eficaz es el gobierno.
+       Acabas de recibir un monto de 100 unidades como ingreso.
     </b>
+    </p>
+    <p>
+    <b>
+       Sin embargo, debes destinar una fracción de tu ingreso como impuestos. La tasa de impuestos es de 28%.
+    </b>
+    </p>
+    <p>
+        El juego consiste en que tendrás que escoger el monto de tu ingreso que vas a declarar al Estado para que, posteriormente,
+        se le aplique la tasa de impuestos.
+        El monto que declaras como ingreso puede ser cualquier número entre 0 (Si le dices al Estado que no tuviste ingresos)
+        y 100 (Si decides comunicar tu ingreso verdadero).
 
-       Tú debes decidir el monto que destinarás como impuesto, esta cantidad puede ser cualquier número entre 0 (Si no pagas impuestos y te quedas con tu ingreso inicial)
-        y 3 (Si pagas los impuestos que te corresponden).
-        Recuerda que tu ganancia por la obra pública depende también de la decisión del otro integrante de tu grupo. Si tú decides pagar impuestos
-        pero tu compañero no, entonces él se beneficiará más porque ganó sin invertir nada adicional.
     </p>
     <p>
-        Las ganancias de la obra pública son calculadas de la siguiente manera: Las contribuciones de
-        los {{ Constants.players_per_group }} participantes se suman, este monto luego es multiplicado por un número aleatorio entre 0 y 2, el cual depende de la eficacia del Estado,
-        el resultado final se divide de igual manera entre los {{ Constants.players_per_group }} participantes.
+        Ten en cuenta que se realizarán auditorías de manera aleatoria y estas pueden llevarse a cabo en cualquier ronda.
+        Si eres auditado y tu ingreso declarado es distinto a tu ingreso verdadero, se te aplica una penalidad equivalente al doble del monto evadido.
+
     </p>
     <p>
-        Tu ganancia final equivale a lo que obtengas por la obra pública, más el dinero que no destinaste como impuesto.
+        Si tu ingreso declarado es igual a tu ingreso verdadero, tu ganancia final es tu ingreso neto de impuestos: Ingreso MENOS impuestos.
+    </p>
+    <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero NO fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto de tu ingreso que no declaraste.
+    </p>
+        <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero SÍ fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto de tu ingreso que no declaraste MENOS la penalidad.
+    </p>
+    <p>
+        El resultado final se muestra al final de cada ronda.
     </p>
 
 </div>
-

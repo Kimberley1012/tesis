@@ -11,6 +11,7 @@ class Page(otree.api.Page):
         self.subsession = models.Subsession()
         self.group = models.Group()
         self.player = models.Player()
+        self.round_number=models.Constants()
 
 
 class WaitPage(otree.api.WaitPage):

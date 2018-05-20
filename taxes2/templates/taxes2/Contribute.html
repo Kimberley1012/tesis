@@ -2,12 +2,12 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Contribución
+    Declaración de ingresos
 {% endblock %}
 
 {% block content %}
 
-    {% formfield player.contribution with label="¿Qué monto pagarás por concepto de impuestos? (de 0 a 3)?" %}
+    {% formfield player.ideclarado with label="¿Qué monto declararás como ingreso? (de 0 a 100)?" %}
 
     {% next_button %}
 
