@@ -134,7 +134,7 @@ SESSION_CONFIGS = [
         'name': 'tesis1',
         'display_name': "Impuestos & Eficacia de gobierno",
         'num_demo_participants': 2,
-        'app_sequence': ["taxes2", 'payment_info'],
+        'app_sequence': ["taxes2","taxes_pg","survey", 'payment_info'],
     },
 #
 #   {
@@ -267,12 +267,6 @@ SESSION_CONFIGS = [
     #         'lemon_market', 'payment_info'
     #     ],
     # },
-    # {
-    #     'name': 'battle_of_the_sexes',
-    #     'display_name': "Battle of the Sexes",
-    #     'num_demo_participants': 2,
-    #     'app_sequence': [
-    #         'battle_of_the_sexes', 'payment_info'
     #     ],
     # },
     # {
