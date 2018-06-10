@@ -22,7 +22,7 @@ class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         self.group.set_payoffs()
 
-    body_text = "Waiting for other participants to contribute."
+    body_text = "Esperando las decisiones de los otros participantes..."
 
 
 class Results(Page):
