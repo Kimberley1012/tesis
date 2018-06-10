@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Contribución
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.contribution with label="¿Cuál es el monto que declararás como ingreso? (De 0 a 100)?" %}
+
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}
