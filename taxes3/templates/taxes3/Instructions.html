@@ -1,0 +1,44 @@
+{% load otree_tags staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instrucciones
+    </h3>
+
+    <p>
+    <b>
+       Acabas de recibir un monto de 100 unidades como ingreso.
+    </b>
+    </p>
+    <p>
+    <b>
+       Sin embargo, debes destinar una fracción de tu ingreso como impuestos. La tasa de impuestos es de 28%.
+    </b>
+    </p>
+    <p>
+        El juego consiste en que tendrás que escoger el monto de tu ingreso que vas a declarar al Estado para que, posteriormente,
+        se le aplique la tasa de impuestos.
+        El monto que declaras como ingreso puede ser cualquier número entre 0 (Si le dices al Estado que no tuviste ingresos)
+        y 100 (Si decides comunicar tu ingreso verdadero).
+
+    </p>
+    <p>
+        Ten en cuenta que se realizarán auditorías de manera aleatoria y estas pueden llevarse a cabo en cualquier ronda.
+        Si eres auditado y tu ingreso declarado es distinto a tu ingreso verdadero, se te aplica una penalidad equivalente al doble del monto evadido.
+
+    </p>
+    <p>
+        Si tu ingreso declarado es igual a tu ingreso verdadero, tu ganancia final es tu ingreso neto de impuestos: Ingreso MENOS impuestos.
+    </p>
+    <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero NO fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto de tu ingreso que no declaraste.
+    </p>
+        <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero SÍ fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto de tu ingreso que no declaraste MENOS la penalidad.
+    </p>
+    <p>
+        El resultado final se muestra al final de cada ronda.
+    </p>
+
+</div>

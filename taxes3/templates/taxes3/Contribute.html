@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Declaración de ingresos
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.ideclarado with label="¿Qué monto declararás como ingreso? (de 0 a 100)?" %}
+
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}
