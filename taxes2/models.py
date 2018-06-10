@@ -43,10 +43,10 @@ class Group(BaseGroup):
     individual_share = models.CurrencyField()
 
     def set_payoffs(self):
-        self.total_ideclarado = sum([p.ideclarado for p in self.get_players()])
+        self.total_ideclarado = sum([0.20*p.ideclarado for p in self.get_players()])
         self.individual_share = self.total_ideclarado * Constants.multiplier / Constants.players_per_group
         for p in self.get_players():
-            p.payoff = (Constants.endowment - 0.28*p.ideclarado)
+            p.payoff = (Constants.endowment - 0.20*p.ideclarado)
 
 
 class Player(BasePlayer):
