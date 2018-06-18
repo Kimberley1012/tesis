@@ -1,0 +1,44 @@
+{% load otree_tags staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instrucciones
+    </h3>
+
+    <p>
+        En este juego, los participantes serán agrupados aleatoriamente en grupos de
+        {{ Constants.players_per_group }} personas. Cada participante tiene un ingreso de
+        {{ Constants.endowment }} unidades.
+    </p>
+    <p>
+        A diferencia del juego anterior, ahora el Estado ha invertido lo recaudado en una obra pública que tendrá beneficios directos para ustedes.
+        Cada integrante del grupo debe decidir cuál es el monto que declara al Estado para que pueda ser aplicada la tasa de impuestos (Igual a 20%).
+        El ingreso declarado puede estar entre 0 y {{ Constants.endowment }}.
+        La labor del Estado consiste en incrementar el valor del total recaudado multiplicándolo por un número que refleja qué tan eficaz es el Estado.
+
+    </p>
+    <p>
+        Tu ganancia por la obra pública depende también de la decisión de los otros integrantes de tu grupo pues se divide el total de lo recaudado en partes iguales.
+        Si tú decides pagar impuestos pero tu compañero no, entonces él se beneficia sin invertir nada adicional.
+        Las auditorías pueden llevarse a cabo de manera aleatoria al término de cualquier ronda y la penalidad es del doble del monto evadido.
+    </p>
+    <p>
+        Las ganancias de la obra pública son calculadas de la siguiente manera: Las contribuciones de
+        los {{ Constants.players_per_group }} participantes se suman, este monto luego es multiplicado por 2 (reflejo de qué tan eficaz es el Estado)
+        y finalmente el monto obtenido se divide en partes iguales entre los {{ Constants.players_per_group }} participantes.
+    </p>
+     <p>
+        Si tu ingreso declarado es igual a tu ingreso verdadero, tu ganancia final es tu ingreso neto de impuestos más tu ganancia por la obra pública.
+    </p>
+    <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero NO fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto del ingreso que no declaraste MÁS la ganancia por la obra pública.
+    </p>
+        <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero SÍ fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto del ingreso que no declaraste MÁS la ganancia por la obra pública MENOS la penalidad.
+    </p>
+    <p>
+        El resultado final se muestra al final de cada ronda.
+    </p>
+</div>
+
