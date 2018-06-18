@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Autoridad
+{% endblock %}
+
+{% block content %}
+{% if player.spanish %}
+    <p>¡Felicitaciones! Has sido escogido para ser la autoridad en tu grupo.
+    Tienes el poder de multiplicar el monto total reportado de tu grupo por
+    {{ mult }}. ¿Deseas hacerlo? </p>
+
+    {% else %}
+        <p>Congratulations! You have been randomly selected to be the authority within your group.
+    You have the power to multiply the total reported income of the participants within your group by
+    {{ mult }}. Do you wish to do so? </p>
+
+    
+
+    {% endif %}
+
+
+    <div>
+        <button name="authority_multiply" value="True" class="btn btn-primary btn-large">Sí</button>
+        <button name="authority_multiply" value="False" class="btn btn-primary btn-large">No</button>
+    </div>
+
+{% endblock %}

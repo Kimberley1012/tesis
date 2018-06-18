@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Información sobre la autoridad
+{% endblock %}
+{% block content %}
+	{% if player.spanish %}
+        <p>
+        Otro jugador fue seleccionado para ser la "Autoridad". Él decidió {{ decision }}
+    	</p>
+    {% else %}
+        <p>
+        Another player was selected to be the "Authority". They decided to {{ decision }} 
+    	</p>
+    {% endif %}
+
+    
+
+
+
+
+
+
+    
+
+    {% next_button %}
+
+    
+{% endblock %}
+
+

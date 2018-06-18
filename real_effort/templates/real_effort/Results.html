@@ -1,0 +1,44 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Resumen
+{% endblock %}
+
+{% block content %}
+
+    <p class="text-success">
+        El siguiente cuadro muestra algunos resultados de las transcripciones que hiciste.
+        En un estudio real, esta tabla no sería mostrada a los jugadores.
+        <br>
+        La distancia <a href="http://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein</a> se ve en la última columna.
+        Nota que la diferencia entre la longitud del texto dado y la longitud del texto que ingresaste es el límite inferior de la distancia Levenshtein.
+    </p>
+
+    <div class="panel panel-success">
+
+        <div class="panel-heading">
+                Estadística de las transcripciones
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>Transcripción #</th>
+                <th>Longitud del texto dado</th>
+                <th>Longitud del texto ingresado</th>
+                <th>Distancia Levenshtein</th>
+            </tr>
+            {% for row in table_rows %}
+            <tr>
+                <td>{{ row.round_number }}</td>
+                <td>{{ row.reference_text_length }}</td>
+                <td>{{ row.transcribed_text_length }}</td>
+                <td>{{ row.distance }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+{% endblock %}

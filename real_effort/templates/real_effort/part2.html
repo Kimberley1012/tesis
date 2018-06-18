@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Impuestos
+{% endblock %}
+
+{% block content %}
+    {% if player.spanish %}
+        <p> Decide cuánto es el monto que reportarás al Estado.  Tu ingreso es {{ income }}</p>
+        <p>  La tasa impositiva es {{ tax }}%.</p>
+    {% else %}
+        <p>
+        Decide how much income to report for taxes. Your income is {{ income }}: based on your performance in the
+        previous transcription task, which multiplied your income by {{ ratio }}
+    </p>
+    <p> The tax rate is {{ tax }}%.</p>
+    <p> The total tax collected by every player is added together, multiplied by {{ mult }}, and divided evenly among
+        all players (even those who reported no income. Your total money is the amount of income you have remaining
+        after tax is taken out, plus your share of the total tax money.
+    </p>
+    {% endif %}
+
+    
+
+
+    {% formfield player.contribution label="¿Cuál es el monto que reportarás como ingreso?" %}
+
+    {% next_button %}
+
+{% endblock %}

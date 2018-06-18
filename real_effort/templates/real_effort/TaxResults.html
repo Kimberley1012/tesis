@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Resultados
+{% endblock %}
+
+{% block content %}
+    {% if player.spanish %}
+        <table class="table-condensed" style="width:500px; margin-top:20px;">
+        <tr><td>Tu ingreso reportado fue: </td><td>{{ player.contribution }}</td></tr>
+        <tr><td>Los ingresos reportados por los otros participantes fueron:</td><td></td></tr>
+        {% for p in player.get_others_in_group %}
+            <tr><td></td><td>{{ p.contribution }}</td></tr>
+        {% endfor %}
+
+        <tr><td>Recaudación total:</td><td>{{ group.total_contribution }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Ganancia total de la inversión pública:</td><td>{{ group.total_earnings }}</td></tr>
+        <tr><td>Tu ganancia individual de la inversión pública:</td><td>{{ group.individual_share }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Tu ganancia final es:</td><td>{{ player.payoff }}</td></tr>
+
+    </table>
+    <p></p>
+    {% else %}
+        <table class="table-condensed" style="width:500px; margin-top:20px;">
+        <tr><td>You reported income of:</td><td>{{ player.contribution }}</td></tr>
+        <tr><td>Other participants reported income of:</td><td></td></tr>
+        {% for p in player.get_others_in_group %}
+            <tr><td></td><td>{{ p.contribution }}</td></tr>
+        {% endfor %}
+
+        <tr><td>Total tax contribution:</td><td>{{ group.total_contribution }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Total earnings:</td><td>{{ total_earnings }}</td></tr>
+        <tr><td>Your earnings:</td><td>{{ player_earnings }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Thus in total you earned:</td><td>{{ player.payoff }}</td></tr>
+
+    </table>
+    <p></p>
+    {% endif %}
+
+
+
+
+    {% next_button %}
+
+
+{% endblock %}
