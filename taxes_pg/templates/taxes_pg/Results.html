@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Resultados
+{% endblock %}
+
+{% block content %}
+  
+
+    <table class="table-condensed" style="width:500px; margin-top:20px;">
+        <tr><td>Tu ingreso declarado fue:</td><td>{{ player.contribution }}</td></tr>
+        <tr><td>Los ingresos declarados de los otros participantes fueron:</td><td></td></tr>
+        {% for p in player.get_others_in_group %}
+            <tr><td></td><td>{{ p.contribution }}</td></tr>
+        {% endfor %}
+
+        <tr><td>Los impuestos totales destinados a la obra pública fueron:</td><td>{{ group.total_contribution }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Ganancias totales de la obra pública:</td><td>{{ total_earnings }}</td></tr>
+        <tr><td>Tus ganancias de la obra pública fueron:</td><td>{{ group.individual_share }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Por lo tanto, tu ganancia total fue:</td><td>{{ player.payoff }}</td></tr>
+
+    </table>
+    <p></p>
+
+    {% next_button %}
+
+
+    {% include Constants.instructions_template %}
+
+
+{% endblock %}

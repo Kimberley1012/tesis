@@ -1,0 +1,40 @@
+{% load otree_tags staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instrucciones
+    </h3>
+
+    <p>
+        Malas noticias: El Estado ahora es MENOS eficaz porque existen indicios de corrupción.
+    </p>
+    <p>
+        El total del monto recaudado por impuestos ahora es multiplicado solo por 1.5 (Antes se multiplicaba por 2).
+    </p>
+    <p>
+        Debes decidir cuál es el monto que declaras al Estado de modo que los impuestos sean descontados automáticamente.
+        La tasa impositiva es de 20%.
+    </p>
+    <p>
+        Recuerda que las auditorías pueden llevarse a cabo de manera aleatoria al término de cualquier ronda y la penalidad es del doble del monto evadido.
+    </p>
+    <p>
+        Las ganancias de la obra pública son calculadas de la siguiente manera: Las contribuciones de
+        los {{ Constants.players_per_group }} participantes se suman, este monto luego es multiplicado por 1.5 (reflejo de qué tan eficaz es el Estado)
+        y finalmente el monto obtenido se divide en partes iguales entre los {{ Constants.players_per_group }} participantes.
+    </p>
+     <p>
+        Si tu ingreso declarado es igual a tu ingreso verdadero, tu ganancia final es tu ingreso neto de impuestos más tu ganancia por la obra pública.
+    </p>
+    <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero NO fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto del ingreso que no declaraste MÁS la ganancia por la obra pública.
+    </p>
+        <p>
+        Si tu ingreso declarado NO es igual a tu ingreso  pero SÍ fuiste auditado, tu ganancia final es igual a tu ingreso declarado neto de impuestos MÁS el monto del ingreso que no declaraste MÁS la ganancia por la obra pública MENOS la penalidad.
+    </p>
+    <p>
+        El resultado final se muestra al final de cada ronda.
+    </p>
+</div>
+
