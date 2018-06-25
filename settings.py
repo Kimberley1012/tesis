@@ -134,7 +134,7 @@ SESSION_CONFIGS = [
         'name': 'tesis1',
         'display_name': "Impuestos & Eficacia de gobierno",
         'num_demo_participants': 2,
-        'app_sequence': ["taxes2","taxes3","taxes_pg2","taxes_pg","real_effort","survey", 'payment_info'],
+        'app_sequence': ["real_effort2","survey", 'payment_info'],
     },
 #
 #   {
