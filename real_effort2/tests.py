@@ -6,8 +6,10 @@ from .models import Constants
 
 class PlayerBot(Bot):
     def play_round(self):
+      #  if self.subsession.round_number == 1:
+            yield (pages.Introduction)
         # must reject transcription that is too inaccurate
-        yield SubmissionMustFail(pages.Transcribe, {'transcribed_text': 'foo'})
+       # yield SubmissionMustFail(pages.Transcribe1, {'transcribed_text': 'foo'})
 
         transcription = Constants.reference_texts[self.round_number - 1]
         add_char = Constants.allowed_error_rates[self.round_number - 1] > 0
@@ -15,7 +17,7 @@ class PlayerBot(Bot):
             # add a 1-char error, should still be fine
             transcription += 'a'
 
-        yield (pages.Transcribe, {'transcribed_text': transcription})
+        yield (pages.Transcribe1, {'transcribed_text': transcription})
 
 
         for value in [
